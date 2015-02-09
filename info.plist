@@ -32,11 +32,11 @@
 			<key>config</key>
 			<dict>
 				<key>applescript</key>
-				<string>-- Only works if load your screensaver
-on alfred_script(q)
+				<string>on alfred_script(q)
 tell application "System Events"
-		keystroke return
-		delay 1
+		do shell script "caffeinate -u -t 1"
+		key code 123
+		delay 0.5
 -- change string password by your real password
 		keystroke "password"
 		delay 1
